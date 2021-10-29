@@ -5,5 +5,24 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GameEngine.MainWindow"
         Title="Gamonto">
-	Welcome to gamontoe
+	<!--Stack Panel-->
+	<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+		<TextBlock FontSize="30">Welcome to Gamonto</TextBlock>
+		<!--Game Type-->
+		<StackPanel Orientation="Horizontal">
+			<TextBlock FontSize="20" VerticalAlignment="Center">Game Type: </TextBlock>
+			<ComboBox Name="GameTypeBox" Margin="10" VerticalAlignment="Center">
+				<ComboBoxItem>Parkour</ComboBoxItem>
+				<ComboBoxItem>Shooter</ComboBoxItem>
+			</ComboBox>
+		</StackPanel>
+		
+		<!--Project Name-->
+		<StackPanel Orientation="Horizontal">
+			<TextBlock FontSize="20" VerticalAlignment="Center">Project Name: </TextBlock>
+			<TextBox Name="ProjectNameSlot" Margin="10" VerticalAlignment="Center"></TextBox>
+		</StackPanel>
+		
+		<Button Name="StartButton" Margin="10" Click="OnClick" HorizontalAlignment="Center" Padding="40, 10">Create project</Button>
+	</StackPanel>
 </Window>
